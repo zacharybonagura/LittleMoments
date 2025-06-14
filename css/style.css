@@ -1,0 +1,337 @@
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  font-family: "Special Elite", monospace;
+}
+
+body {
+  font-family: "Special Elite", monospace;
+  background-color: #000;
+  color: white;
+}
+
+header {
+  background-color: #000;
+  text-align: center;
+  padding: 1rem 0;
+  border-bottom: 2px solid white;
+  height: auto;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.logo-img {
+  height: 90px;
+  object-fit: contain;
+  margin: 0 auto;
+}
+
+.logo {
+  padding-bottom: 1rem;
+}
+
+nav ul {
+  display: flex;
+  justify-content: center;
+  list-style: none;
+  padding: 1rem 0 0.8rem 0;
+  margin: 0;
+  border-top: 2px solid white;
+  border-bottom: 2px solid white;
+}
+
+nav ul li {
+  margin: 0 1.5rem;
+  font-size: 1.2rem;
+}
+
+nav ul li a {
+  color: white;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+nav ul li a:hover {
+  color: #ff3c3c;
+}
+
+main {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  background-color: white;
+  color: black;
+}
+.hero__container {
+  position: relative;
+  width: 100%;
+  height: clamp(200px, 40vw, 700px);
+  overflow: hidden;
+}
+
+.hero__fade-image {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  transition: opacity 1s ease-in-out;
+}
+.photo-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+  width: 100%;
+  max-width: 1200px;
+}
+
+.photo {
+  height: 300px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: white;
+  color: black;
+  border: 2px solid black;
+  font-size: 1.5rem;
+  transition: border-color 0.3s, color 0.3s;
+}
+
+.photo:hover {
+  border-color: #ff3c3c;
+  color: #ff3c3c;
+}
+
+.about-section {
+  max-width: 800px;
+  margin: 0 auto;
+  background: white;
+  padding: 2rem;
+  border: 2px solid black;
+  color: black;
+  text-align: center;
+}
+
+.about-section h1 {
+  font-family: "Special Elite", monospace;
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+.about-section p {
+  font-size: 1.2rem;
+  line-height: 1.6;
+}
+
+/* || CONTACT */
+.contact-section {
+  max-width: 600px;
+  margin: 2rem auto;
+  background: white;
+  color: black;
+  padding: 2rem;
+  border: 2px solid black;
+  text-align: center;
+}
+
+.contact-section h1 {
+  font-family: "Special Elite", monospace;
+  font-size: 2.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.contact-form label {
+  font-weight: bold;
+  text-align: left;
+}
+
+.contact-form input,
+.contact-form textarea {
+  padding: 0.5rem;
+  border: 1px solid black;
+  font-family: inherit;
+  font-size: 1rem;
+}
+
+.contact-form button {
+  background-color: black;
+  color: white;
+  border: none;
+  padding: 0.75rem;
+  font-size: 1rem;
+  font-family: "Special Elite", monospace;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.contact-form button:hover {
+  background-color: #ff3c3c;
+}
+
+/* || MUSIC */
+.music-section {
+  max-width: 800px;
+  margin: 2rem auto;
+  background: white;
+  color: black;
+  padding: 2rem;
+  border: 2px solid black;
+  text-align: center;
+}
+
+.music-section h1 {
+  font-family: "Special Elite", monospace;
+  font-size: 2.5rem;
+  margin-bottom: 2rem;
+}
+
+.album {
+  margin-bottom: 2rem;
+}
+
+.album h2 {
+  font-size: 1.8rem;
+  margin-bottom: 1rem;
+}
+
+.song-list {
+  list-style-type: decimal;
+  text-align: left;
+  padding-left: 2rem;
+}
+
+.song-list li {
+  margin-bottom: 0.5rem;
+  font-size: 1.1rem;
+}
+/* || MERCH */
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1rem;
+  width: 100%;
+  max-width: 1200px;
+  margin: 2rem auto;
+  padding: 0 1rem;
+}
+
+.product-card {
+  border: 1px solid black;
+  padding: 1rem;
+  background-color: white;
+  color: black;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  text-align: center;
+  transition: transform 0.2s;
+}
+
+.product-card:hover {
+  transform: scale(1.03);
+  border-color: #ff3c3c;
+}
+
+.product-card h2 {
+  font-size: 1.8rem;
+}
+
+.product-card hr {
+  margin: 1rem 0;
+}
+
+/* || FOOTER */
+.footer {
+  background-color: #000;
+  color: white;
+  border-top: 2px solid white;
+  padding: 1.5rem 0;
+  text-align: center;
+  font-family: "Special Elite", monospace;
+}
+
+.footer-content {
+  display: flex;
+  justify-content: center;
+  align-items: center; /* ✅ Align vertically */
+  flex-wrap: wrap;
+  gap: 2rem;
+}
+
+.footer-section {
+  display: flex; /* ✅ Align items within each block */
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.footer a {
+  color: white;
+  text-decoration: none;
+}
+
+.footer a.contact-footer-button {
+  color: black; /* Force default text color */
+}
+
+.footer a.contact-footer-button:hover {
+  color: white;
+}
+
+.contact-footer-button {
+  display: inline-block;
+  padding: 1rem 1rem 0.7rem 1rem; /* ↓ slightly less vertical padding */
+  background-color: white;
+  color: black;
+  border: 2px solid black;
+  font-weight: bold;
+  font-family: "Special Elite", monospace;
+  transition: background-color 0.3s, color 0.3s, border-color 0.3s;
+  text-decoration: none;
+  line-height: 1; /* 👈 helps reduce extra button height */
+}
+
+.contact-footer-button:hover {
+  background-color: #ff3c3c;
+  color: white; /* 👈 Changes text to white on hover */
+  border-color: #ff3c3c;
+}
+
+.footer-socials {
+  display: flex;
+  justify-content: center;
+  align-items: center; /* This ensures vertical centering */
+  gap: 1.5rem;
+  margin-top: 1rem;
+  flex-wrap: wrap;
+}
+
+.footer-socials a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.3s;
+}
+
+.footer-socials a:hover {
+  color: #ff3c3c;
+}
