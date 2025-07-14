@@ -16,66 +16,117 @@
     />
   </head>
   <body>
-    <header>
-      <div class="logo">
-        <img
-          src="img/Little Moments.png"
-          alt="Little Moments Logo"
-          class="logo-img"
-        />
-      </div>
-      <nav>
-        <ul>
-          <li><a href="index.html">Home</a></li>
-          <li><a href="about.html">About</a></li>
-          <li><a href="contact.html">Contact</a></li>
-          <li><a href="music.html">Music</a></li>
-          <li><a href="merch.html">Merch</a></li>
-        </ul>
-      </nav>
-    </header>
+    <div class="page-wrapper">
+      <header>
+        <div class="logo">
+          <img
+            src="img/Little Moments.png"
+            alt="Little Moments Logo"
+            class="logo-img"
+          />
+        </div>
+        <nav>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="music.html">Music</a></li>
+            <li><a href="merch.html">Merch</a></li>
+          </ul>
+        </nav>
+      </header>
 
-    <main>
-      <section class="hero__container">
-        <img class="hero__fade-image" src="img/JIN8601.jpg" alt="Image 1" />
-        <img class="hero__fade-image" src="img/JIN8602.jpg" alt="Image 2" />
-        <img class="hero__fade-image" src="img/JIN8603.jpg" alt="Image 3" />
-        <img class="hero__fade-image" src="img/JIN8604.jpg" alt="Image 4" />
-        <img class="hero__fade-image" src="img/JIN8605.jpg" alt="Image 5" />
-      </section>
-    </main>
-    <footer class="footer">
-      <div class="footer-content">
-        <div class="footer-section">
+      <main>
+        <section class="hero__container">
+          <img class="hero__fade-image" src="img/JIN8601.jpg" alt="Image 1" />
+          <img class="hero__fade-image" src="img/JIN8602.jpg" alt="Image 2" />
+          <img class="hero__fade-image" src="img/JIN8603.jpg" alt="Image 3" />
+          <img class="hero__fade-image" src="img/JIN8604.jpg" alt="Image 4" />
+          <img class="hero__fade-image" src="img/JIN8605.jpg" alt="Image 5" />
+        </section>
+
+        <!-- About Section Preview -->
+        <section class="about-section">
+          <h1>Who We Are</h1>
           <p>
-            <strong>Email:</strong>
-            <a href="mailto:littlemomentsband@gmail.com"
-              >littlemomentsband@gmail.com</a
-            >
+            Little Moments is an alternative rock band based in West Nyack, NY.
+            We blend raw emotion with infectious melodies to create music that
+            resonates with the soul. Catch us live or stream our latest
+            releases!
           </p>
+        </section>
+
+        <!-- Featured Music Section -->
+        <section class="music-section">
+          <h1>Latest Release</h1>
+          <div class="album">
+            <h2><em>Romantic Homicide</em></h2>
+            <ul class="song-list">
+              <li>Blue</li>
+              <li>March of the Kismet Soldier</li>
+              <li>The Hardest Part of Saying Goodbye</li>
+              <li>Gun Shy</li>
+              <li>Take My Voice Away</li>
+            </ul>
+          </div>
+          <p>Available on Spotify and Apple Music.</p>
+        </section>
+
+        <!-- Merch Preview -->
+        <section class="product-grid">
+          <div class="product-card">
+            <h2>Band Tee</h2>
+            <hr />
+            <p>Soft cotton shirt with Little Moments logo</p>
+          </div>
+          <div class="product-card">
+            <h2>Poster Pack</h2>
+            <hr />
+            <p>Limited edition tour poster collection</p>
+          </div>
+          <div class="product-card">
+            <h2>Sticker Set</h2>
+            <hr />
+            <p>Custom vinyl stickers of our album art</p>
+          </div>
+        </section>
+      </main>
+
+      <footer class="footer">
+        <div class="footer-content">
+          <div class="footer-section">
+            <p>
+              <strong>Email:</strong>
+              <a href="mailto:littlemomentsband@gmail.com"
+                >littlemomentsband@gmail.com</a
+              >
+            </p>
+          </div>
+
+          <div class="footer-section">
+            <p><strong>Location:</strong> West Nyack, NY</p>
+          </div>
         </div>
 
-        <div class="footer-section">
-          <p><strong>Location:</strong> West Nyack, NY</p>
+        <div class="footer-socials">
+          <a
+            href="https://instagram.com/littlemomentsband/?hl=en"
+            target="_blank"
+            >Instagram</a
+          >
+          <a href="https://twitter.com/littlemomentsny" target="_blank"
+            >Twitter</a
+          >
+          <a href="https://tiktok.com/@littlemomentsband" target="_blank"
+            >TikTok</a
+          >
+          <a href="https://youtube.com/@littlemomentsband" target="_blank"
+            >YouTube</a
+          >
+          <a href="contact.html" class="contact-footer-button">Contact Us</a>
         </div>
-      </div>
-
-      <div class="footer-socials">
-        <a href="https://instagram.com/littlemomentsband/?hl=en" target="_blank"
-          >Instagram</a
-        >
-        <a href="https://twitter.com/littlemomentsny" target="_blank"
-          >Twitter</a
-        >
-        <a href="https://tiktok.com/@littlemomentsband" target="_blank"
-          >TikTok</a
-        >
-        <a href="https://youtube.com/@littlemomentsband" target="_blank"
-          >YouTube</a
-        >
-        <a href="contact.html" class="contact-footer-button">Contact Us</a>
-      </div>
-    </footer>
+      </footer>
+    </div>
   </body>
   <script>
     const images = document.querySelectorAll(".hero__fade-image");

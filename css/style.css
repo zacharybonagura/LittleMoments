@@ -11,7 +11,12 @@ body {
   height: 100%;
   margin: 0;
   padding: 0;
-  font-family: "Special Elite", monospace;
+}
+
+.page-wrapper {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
 }
 
 body {
@@ -70,15 +75,18 @@ nav ul li a:hover {
 main {
   flex: 1;
   display: flex;
-  justify-content: center;
+  flex-direction: column;
+  align-items: center;
   background-color: white;
   color: black;
 }
+
 .hero__container {
   position: relative;
   width: 100%;
   height: clamp(200px, 40vw, 700px);
   overflow: hidden;
+  border-bottom: 2px solid black;
 }
 
 .hero__fade-image {
@@ -119,6 +127,7 @@ main {
 .about-section {
   max-width: 800px;
   margin: 0 auto;
+  margin-top: 1rem;
   background: white;
   padding: 2rem;
   border: 2px solid black;
@@ -202,11 +211,10 @@ main {
 .music-section h1 {
   font-family: "Special Elite", monospace;
   font-size: 2.5rem;
-  margin-bottom: 2rem;
 }
 
 .album {
-  margin-bottom: 2rem;
+  padding: 1rem 2rem 0rem 2rem; /* top right bottom left */
 }
 
 .album h2 {
@@ -214,10 +222,16 @@ main {
   margin-bottom: 1rem;
 }
 
+.album-cover {
+  max-width: 100%;
+  width: 300px;
+  margin-bottom: 1rem;
+  border: 2px solid black;
+}
+
 .song-list {
   list-style-type: decimal;
   text-align: left;
-  padding-left: 2rem;
 }
 
 .song-list li {
@@ -262,22 +276,24 @@ main {
 
 /* || FOOTER */
 .footer {
-  background-color: #000;
-  color: white;
-  border-top: 2px solid white;
-  padding: 1.5rem 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 20px; /* adjust if needed */
+  max-height: 200px; /* limit overall height */
+  overflow: hidden; /* prevent overflow */
+  background-color: #111; /* or whatever you're using */
+  color: #fff;
   text-align: center;
-  font-family: "Special Elite", monospace;
 }
 
 .footer-content {
   display: flex;
-  justify-content: center;
-  align-items: center; /* ✅ Align vertically */
+  flex-direction: row;
+  gap: 40px;
   flex-wrap: wrap;
-  gap: 2rem;
 }
-
 .footer-section {
   display: flex; /* ✅ Align items within each block */
   align-items: center;
