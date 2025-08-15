@@ -14,23 +14,31 @@
       href="https://fonts.googleapis.com/css2?family=Special+Elite&display=swap"
       rel="stylesheet"
     />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
   </head>
   <body>
     <div class="page-wrapper">
-      <header>
-        <div class="logo">
-          <img
-            src="img/Little Moments.png"
-            alt="Little Moments Logo"
-            class="logo-img"
-          />
+      <header class="lm-header">
+        <div class="lm-header-content">
+          <div class="lm-logo">
+            <img
+              src="img/Little Moments.png"
+              alt="Little Moments Logo"
+              class="lm-logo-img"
+            />
+          </div>
+          <button class="lm-hamburger" aria-label="Toggle menu">☰</button>
         </div>
-        <nav>
-          <ul>
+
+        <nav class="lm-nav">
+          <ul class="lm-nav-links">
             <li><a href="index.html">Home</a></li>
             <li><a href="about.html">About</a></li>
             <li><a href="contact.html">Contact</a></li>
-            <li><a href="music.html">Music</a></li>
+            <li><a href="music.html" class="selected">Music</a></li>
             <li><a href="merch.html">Merch</a></li>
           </ul>
         </nav>
@@ -41,20 +49,93 @@
           <h1>Our Music</h1>
 
           <div class="album">
-            <img
-              src="img/Little Moments.jpg"
-              alt="Romantic Homicide Album Cover"
-              class="album-cover"
-            />
-            <h2><em>Romantic Homicide</em></h2>
-            <ul class="song-list">
-              <li>Blue</li>
-              <li>March of the Kismet Soldier</li>
-              <li>The Hardest Part of Saying Goodbye</li>
-              <li>Gun Shy</li>
-              <li>Take My Voice Away</li>
-            </ul>
+            <div class="album-info">
+              <img
+                src="img/Little Moments.jpg"
+                alt="Romantic Homicide Album Cover"
+                class="album-cover"
+              />
+              <h2><em>Romantic Homicide</em></h2>
+              <p class="album-subtitle">EP • August 8th</p>
+            </div>
+            <div class="album-songs">
+              <ul class="song-list">
+                <li>
+                  Blue
+                  <button class="play-btn" data-duration="42">
+                    <svg class="progress-ring" width="32" height="32">
+                      <circle class="ring-bg" r="14" cx="16" cy="16" />
+                      <circle class="ring-fill" r="14" cx="16" cy="16" />
+                    </svg>
+                    <i class="fas fa-play"></i>
+                  </button>
+                  <audio src="audio/blue.mp3"></audio>
+                </li>
+                <li>
+                  March of the Kismet Soldier
+                  <button class="play-btn" data-duration="42">
+                    <svg class="progress-ring" width="32" height="32">
+                      <circle class="ring-bg" r="14" cx="16" cy="16" />
+                      <circle class="ring-fill" r="14" cx="16" cy="16" />
+                    </svg>
+                    <i class="fas fa-play"></i>
+                  </button>
+                  <audio src="audio/march.mp3"></audio>
+                </li>
+                <li>
+                  The Hardest Part of Saying Goodbye
+                  <button class="play-btn" data-duration="33">
+                    <svg class="progress-ring" width="32" height="32">
+                      <circle class="ring-bg" r="14" cx="16" cy="16" />
+                      <circle class="ring-fill" r="14" cx="16" cy="16" />
+                    </svg>
+                    <i class="fas fa-play"></i>
+                  </button>
+                  <audio src="audio/goodbye.mp3"></audio>
+                </li>
+                <li>
+                  Gun Shy
+                  <button class="play-btn" data-duration="42">
+                    <svg class="progress-ring" width="32" height="32">
+                      <circle class="ring-bg" r="14" cx="16" cy="16" />
+                      <circle class="ring-fill" r="14" cx="16" cy="16" />
+                    </svg>
+                    <i class="fas fa-play"></i>
+                  </button>
+                  <audio src="audio/gunshy.mp3"></audio>
+                </li>
+                <li>
+                  Take My Voice Away
+                  <button class="play-btn" data-duration="42">
+                    <svg class="progress-ring" width="32" height="32">
+                      <circle class="ring-bg" r="14" cx="16" cy="16" />
+                      <circle class="ring-fill" r="14" cx="16" cy="16" />
+                    </svg>
+                    <i class="fas fa-play"></i>
+                  </button>
+                  <audio src="audio/voiceaway.mp3"></audio>
+                </li>
+              </ul>
+            </div>
           </div>
+          <p class="album-availability">
+            Available on
+            <a
+              href="https://open.spotify.com/album/21LExgbgnod7OwiL2BkQwH?si=x4CZzHfGRaGEXId5iN9DaA"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Spotify
+            </a>
+            and
+            <a
+              href="https://music.apple.com/us/album/romantic-homicide-ep/1832275357"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Apple Music
+            </a>
+          </p>
         </section>
       </main>
       <footer class="footer">
@@ -88,9 +169,111 @@
           <a href="https://youtube.com/@littlemomentsband" target="_blank"
             >YouTube</a
           >
+        </div>
+
+        <div class="footer-links">
+          <a
+            href="https://open.spotify.com/artist/2HL45kyUhthGkJVEyYOY7p?si=cL5smNqRRbCUaLqGF40VKQ"
+            target="_blank"
+            >Spotify</a
+          >
           <a href="contact.html" class="contact-footer-button">Contact Us</a>
+          <a
+            href="https://music.apple.com/us/artist/little-moments/1832122422"
+            target="_blank"
+            >Apple Music</a
+          >
         </div>
       </footer>
     </div>
+    <script>
+      const buttons = document.querySelectorAll(".play-btn");
+      let currentAudio = null;
+      let currentButton = null;
+      let timeoutId = null;
+      let progressInterval = null;
+
+      buttons.forEach((btn) => {
+        btn.addEventListener("click", () => {
+          const li = btn.closest("li");
+          const audio = li.querySelector("audio");
+          const icon = btn.querySelector("i");
+          const ring = btn.querySelector(".ring-fill");
+
+          // If clicking same button while playing
+          if (currentAudio === audio && !audio.paused) {
+            audio.pause();
+            audio.currentTime = 0;
+            icon.classList.replace("fa-pause", "fa-play");
+            clearInterval(progressInterval);
+            ring.style.strokeDashoffset = 88;
+            clearTimeout(timeoutId);
+            currentAudio = null;
+            currentButton = null;
+            return;
+          }
+
+          // Pause any other audio
+          if (currentAudio && currentAudio !== audio) {
+            currentAudio.pause();
+            currentAudio.currentTime = 0;
+            currentButton
+              .querySelector("i")
+              .classList.replace("fa-pause", "fa-play");
+            currentButton.querySelector(
+              ".ring-fill"
+            ).style.strokeDashoffset = 88;
+            clearInterval(progressInterval);
+            clearTimeout(timeoutId);
+          }
+
+          // Play this audio
+          audio.play();
+          icon.classList.replace("fa-play", "fa-pause");
+
+          // Wait for metadata to load to get actual duration
+          if (isNaN(audio.duration) || audio.duration === Infinity) {
+            audio.addEventListener(
+              "loadedmetadata",
+              () => startPlayback(audio, icon, ring, btn),
+              { once: true }
+            );
+          } else {
+            startPlayback(audio, icon, ring, btn);
+          }
+
+          currentAudio = audio;
+          currentButton = btn;
+        });
+      });
+
+      function startPlayback(audio, icon, ring, btn) {
+        const totalDuration = audio.duration; // Full mp3 length
+        let elapsed = 0;
+
+        // Animate ring
+        clearInterval(progressInterval);
+        progressInterval = setInterval(() => {
+          elapsed += 0.1;
+          const progress = (elapsed / totalDuration) * 88;
+          ring.style.strokeDashoffset = 88 - progress;
+          if (elapsed >= totalDuration) {
+            clearInterval(progressInterval);
+          }
+        }, 100);
+
+        // Stop after song finishes
+        clearTimeout(timeoutId);
+        timeoutId = setTimeout(() => {
+          audio.pause();
+          audio.currentTime = 0;
+          icon.classList.replace("fa-pause", "fa-play");
+          ring.style.strokeDashoffset = 88;
+          clearInterval(progressInterval);
+          currentAudio = null;
+          currentButton = null;
+        }, totalDuration * 1000);
+      }
+    </script>
   </body>
 </html>
