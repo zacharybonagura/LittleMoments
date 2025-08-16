@@ -21,12 +21,12 @@ body {
 
 body {
   font-family: "Special Elite", monospace;
-  background-color: #000;
+  background-color: black;
   color: white;
 }
 
 header {
-  background-color: #000;
+  background-color: black;
   text-align: center;
   padding: 1rem 0;
   border-bottom: 2px solid white;
@@ -47,7 +47,7 @@ header {
   padding-bottom: 0.5rem;
 }
 .lm-header {
-  background-color: #000;
+  background-color: black;
   border-bottom: 2px solid white;
 }
 
@@ -142,7 +142,7 @@ nav ul li a.selected {
   /* Hide nav by default on mobile */
   .lm-nav {
     display: none;
-    background-color: #000;
+    background-color: black;
     border-top: 2px solid white;
   }
 
@@ -545,8 +545,8 @@ main {
   padding: 20px; /* adjust if needed */
   max-height: 200px; /* limit overall height */
   overflow: hidden; /* prevent overflow */
-  background-color: #111; /* or whatever you're using */
-  color: #fff;
+  background-color: black; /* or whatever you're using */
+  color: white;
   text-align: center;
   margin-bottom: 0.5rem;
 }
