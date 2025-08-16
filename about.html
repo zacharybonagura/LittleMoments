@@ -108,4 +108,14 @@
       </footer>
     </div>
   </body>
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      const hamburger = document.querySelector(".lm-hamburger");
+      const nav = document.querySelector(".lm-nav");
+
+      hamburger.addEventListener("click", () => {
+        nav.classList.toggle("open");
+      });
+    });
+  </script>
 </html>
