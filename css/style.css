@@ -135,6 +135,8 @@ nav ul li a.selected {
 
   .lm-hamburger {
     display: block;
+    position: relative;
+    top: -8px;
   }
 
   /* Hide nav by default on mobile */
